@@ -182,6 +182,41 @@
   .error-msg { display:none; background:#fff0f0; border:1px solid rgba(220,53,69,0.3); color:#c0392b; font-size:13px; padding:14px 18px; margin-top:16px; border-radius:4px; text-align:center; }
   .error-msg.show { display:block; }
 
+ /* TESTIMONIOS */
+#testimonios{background:var(--dark-2);padding:100px 48px;border-top:1px solid rgba(201,168,76,0.12);border-bottom:1px solid rgba(201,168,76,0.12);}
+.testimonios-inner{max-width:1100px;margin:0 auto;}
+.sig-video-card{background:var(--dark-3);border:1px solid rgba(201,168,76,0.15);overflow:hidden;margin-bottom:60px;}
+.sig-video-wrapper{width:100%;aspect-ratio:16/9;background:#000;}
+.sig-video-wrapper video{width:100%;height:100%;display:block;object-fit:cover;}
+.sig-video-info{padding:28px 36px;display:flex;align-items:flex-start;gap:18px;border-top:1px solid rgba(201,168,76,0.15);}
+.sig-avatar-v{width:50px;height:50px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;color:var(--dark);flex-shrink:0;font-family:'Jost',sans-serif;}
+.sig-badge-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;}
+.sig-badge{font-size:10px;font-weight:600;letter-spacing:0.1em;padding:4px 14px;text-transform:uppercase;}
+.sig-badge-gold{background:rgba(201,168,76,0.12);color:var(--gold);border:1px solid rgba(201,168,76,0.4);}
+.sig-badge-green{background:rgba(72,199,142,0.1);color:#48C78E;border:1px solid rgba(72,199,142,0.35);}
+.sig-video-quote{font-family:'Cormorant Garamond',serif;font-size:17px;color:rgba(255,255,255,0.6);line-height:1.65;font-style:italic;margin:0 0 10px;}
+.sig-video-name{font-size:14px;font-weight:600;color:var(--white);margin:0;letter-spacing:0.05em;}
+.sig-video-role{font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin:4px 0 0;}
+.sig-divider{display:flex;align-items:center;gap:20px;margin-bottom:48px;}
+.sig-divider-line{flex:1;height:1px;background:rgba(201,168,76,0.2);}
+.sig-divider-label{font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);white-space:nowrap;}
+.sig-reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2px;}
+.sig-review-card{background:var(--dark-3);border:1px solid rgba(201,168,76,0.08);padding:36px;display:flex;flex-direction:column;gap:16px;transition:border-color 0.3s,transform 0.3s;position:relative;overflow:hidden;}
+.sig-review-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,transparent,var(--gold),transparent);opacity:0;transition:opacity 0.3s;}
+.sig-review-card:hover{border-color:rgba(201,168,76,0.25);transform:translateY(-4px);}
+.sig-review-card:hover::before{opacity:1;}
+.sig-stars{display:flex;gap:4px;}
+.sig-star{width:14px;height:14px;background:var(--gold);clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);}
+.sig-tag{display:inline-block;font-size:9px;font-weight:600;letter-spacing:0.15em;padding:4px 12px;text-transform:uppercase;background:rgba(201,168,76,0.08);color:var(--gold);border:1px solid rgba(201,168,76,0.25);align-self:flex-start;}
+.sig-review-text{font-family:'Cormorant Garamond',serif;font-size:16px;color:rgba(255,255,255,0.55);line-height:1.75;font-style:italic;flex:1;}
+.sig-reviewer{display:flex;align-items:center;gap:12px;border-top:1px solid rgba(201,168,76,0.12);padding-top:20px;margin-top:auto;}
+.sig-rev-avatar{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;flex-shrink:0;color:#fff;font-family:'Jost',sans-serif;}
+.av-blue{background:#1A4F8A}.av-teal{background:#0D6655}.av-purple{background:#4A2585}.av-coral{background:#8B3020}.av-green{background:#1A6B3A}
+.sig-reviewer-name{font-size:13px;font-weight:500;color:var(--white);margin:0;letter-spacing:0.05em;}
+.sig-reviewer-desc{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin:3px 0 0;}
+@media(max-width:900px){#testimonios{padding:60px 24px;}.sig-reviews-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:640px){.sig-video-info{flex-direction:column;}.sig-reviews-grid{grid-template-columns:1fr;}}
+ 
   /* FOOTER */
   footer { background:var(--dark); border-top:1px solid rgba(201,168,76,0.12); padding:48px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:24px; }
   .footer-copy { font-size:11px; color:rgba(255,255,255,0.25); letter-spacing:0.08em; }
@@ -222,6 +257,7 @@
     <button class="nav-link" onclick="document.getElementById('capacitacion').scrollIntoView({behavior:'smooth'})">Capacitación</button>
     <button class="nav-link" onclick="document.getElementById('companias').scrollIntoView({behavior:'smooth'})">Compañías</button>
     <button class="nav-link" onclick="document.getElementById('asesor').scrollIntoView({behavior:'smooth'})">El Asesor</button>
+   <button class="nav-link" onclick="document.getElementById('testimonios').scrollIntoView({behavior:'smooth'})">Testimonios</button>
   </div>
   <button class="nav-cta" onclick="document.getElementById('registro').scrollIntoView({behavior:'smooth'})">Contactar Ahora</button>
 </nav>
@@ -532,6 +568,80 @@
   </div>
 </section>
 
+ <!-- TESTIMONIOS -->
+<section id="testimonios">
+  <div class="testimonios-inner">
+    <p class="section-label">Testimonios</p>
+    <h2 class="section-title">Lo que dicen nuestros <em>clientes y alumnos</em></h2>
+
+    <!-- VIDEO Kelly Agudelo — sube review.mp4 a una carpeta /videos/ en tu repo -->
+    <div class="sig-video-card">
+      <div class="sig-video-wrapper">
+        <video controls preload="metadata">
+          <source src="videos/review.mp4" type="video/mp4"/>
+        </video>
+      </div>
+      <div class="sig-video-info">
+        <div class="sig-avatar-v">KA</div>
+        <div>
+          <div class="sig-badge-row">
+            <span class="sig-badge sig-badge-gold">SIG Academy</span>
+            <span class="sig-badge sig-badge-green">&#10003; Examen estatal aprobado</span>
+          </div>
+          <p class="sig-video-quote">"Gracias a la capacitación de SIG Academy pude aprobar mi examen estatal. Una experiencia que cambió mi carrera como agente."</p>
+          <p class="sig-video-name">Kelly Agudelo</p>
+          <p class="sig-video-role">Alumna de SIG Academy &mdash; Agente licenciada</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sig-divider">
+      <div class="sig-divider-line"></div>
+      <span class="sig-divider-label">Más testimonios</span>
+      <div class="sig-divider-line"></div>
+    </div>
+
+    <div class="sig-reviews-grid">
+      <div class="sig-review-card">
+        <div class="sig-stars"><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div></div>
+        <span class="sig-tag">IUL &mdash; Familia</span>
+        <p class="sig-review-text">"Gracias a su asesoría encontré una póliza que protege a mi familia y acumula valor para mi retiro. Me explicó todo con paciencia y sin presiones."</p>
+        <div class="sig-reviewer"><div class="sig-rev-avatar av-blue">MR</div><div><p class="sig-reviewer-name">María Rodríguez</p><p class="sig-reviewer-desc">Madre de familia · Miami FL</p></div></div>
+      </div>
+      <div class="sig-review-card">
+        <div class="sig-stars"><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div></div>
+        <span class="sig-tag">IUL &mdash; Negocio</span>
+        <p class="sig-review-text">"Pensaba que el seguro de vida era solo un gasto. Ahora entiendo cómo funciona como herramienta financiera real. La diferencia es enorme."</p>
+        <div class="sig-reviewer"><div class="sig-rev-avatar av-teal">CL</div><div><p class="sig-reviewer-name">Carlos López</p><p class="sig-reviewer-desc">Empresario · Houston TX</p></div></div>
+      </div>
+      <div class="sig-review-card">
+        <div class="sig-stars"><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div></div>
+        <span class="sig-tag">IUL &mdash; Retiro</span>
+        <p class="sig-review-text">"El plan que diseñó para mí se ajusta perfectamente a mis ingresos y metas. Me siento tranquila sabiendo que tengo un plan sólido para el futuro."</p>
+        <div class="sig-reviewer"><div class="sig-rev-avatar av-purple">AG</div><div><p class="sig-reviewer-name">Ana González</p><p class="sig-reviewer-desc">Profesora · Orlando FL</p></div></div>
+      </div>
+      <div class="sig-review-card">
+        <div class="sig-stars"><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div></div>
+        <span class="sig-tag">IUL &mdash; Herencia</span>
+        <p class="sig-review-text">"Quería dejarle algo a mis hijos sin pagar impuestos innecesarios. Me guió paso a paso y logré exactamente lo que buscaba. Muy profesional."</p>
+        <div class="sig-reviewer"><div class="sig-rev-avatar av-coral">JM</div><div><p class="sig-reviewer-name">Jorge Martínez</p><p class="sig-reviewer-desc">Contratista · Dallas TX</p></div></div>
+      </div>
+      <div class="sig-review-card">
+        <div class="sig-stars"><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div></div>
+        <span class="sig-tag">IUL &mdash; Joven</span>
+        <p class="sig-review-text">"A mis 28 años no pensaba en esto, pero me mostró por qué empezar joven es la clave. La ilustración que me preparó fue muy clara y convincente."</p>
+        <div class="sig-reviewer"><div class="sig-rev-avatar av-green">SD</div><div><p class="sig-reviewer-name">Sofía Díaz</p><p class="sig-reviewer-desc">Enfermera · Los Ángeles CA</p></div></div>
+      </div>
+      <div class="sig-review-card">
+        <div class="sig-stars"><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div></div>
+        <span class="sig-tag">IUL &mdash; Protección</span>
+        <p class="sig-review-text">"Me sorprendió lo completo que era el plan. Protección, ahorro y flexibilidad en uno solo. Lo recomiendo a cualquier persona que quiera seguridad real."</p>
+        <div class="sig-reviewer"><div class="sig-rev-avatar av-blue">RP</div><div><p class="sig-reviewer-name">Roberto Peña</p><p class="sig-reviewer-desc">Chef · New York NY</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
 <footer>
   <div class="nav-logo">
     <div class="nav-sig">SIG</div>
