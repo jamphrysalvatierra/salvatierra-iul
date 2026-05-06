@@ -89,41 +89,6 @@
   </div>
 </section>
  
-  /* TESTIMONIOS */
-#testimonios{background:var(--dark-2);padding:100px 48px;border-top:1px solid rgba(201,168,76,0.12);border-bottom:1px solid rgba(201,168,76,0.12);}
-.testimonios-inner{max-width:1100px;margin:0 auto;}
-.sig-video-card{background:var(--dark-3);border:1px solid rgba(201,168,76,0.15);overflow:hidden;margin-bottom:60px;}
-.sig-video-wrapper{width:100%;aspect-ratio:16/9;background:#000;}
-.sig-video-wrapper video{width:100%;height:100%;display:block;object-fit:contain;background:#000;}
-.sig-video-info{padding:28px 36px;display:flex;align-items:flex-start;gap:18px;border-top:1px solid rgba(201,168,76,0.15);}
-.sig-avatar-v{width:50px;height:50px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;color:var(--dark);flex-shrink:0;font-family:'Jost',sans-serif;}
-.sig-badge-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;}
-.sig-badge{font-size:10px;font-weight:600;letter-spacing:0.1em;padding:4px 14px;text-transform:uppercase;}
-.sig-badge-gold{background:rgba(201,168,76,0.12);color:var(--gold);border:1px solid rgba(201,168,76,0.4);}
-.sig-badge-green{background:rgba(72,199,142,0.1);color:#48C78E;border:1px solid rgba(72,199,142,0.35);}
-.sig-video-quote{font-family:'Cormorant Garamond',serif;font-size:17px;color:rgba(255,255,255,0.6);line-height:1.65;font-style:italic;margin:0 0 10px;}
-.sig-video-name{font-size:14px;font-weight:600;color:var(--white);margin:0;letter-spacing:0.05em;}
-.sig-video-role{font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin:4px 0 0;}
-.sig-divider{display:flex;align-items:center;gap:20px;margin-bottom:48px;}
-.sig-divider-line{flex:1;height:1px;background:rgba(201,168,76,0.2);}
-.sig-divider-label{font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);white-space:nowrap;}
-.sig-reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2px;}
-.sig-review-card{background:var(--dark-3);border:1px solid rgba(201,168,76,0.08);padding:36px;display:flex;flex-direction:column;gap:16px;transition:border-color 0.3s,transform 0.3s;position:relative;overflow:hidden;}
-.sig-review-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,transparent,var(--gold),transparent);opacity:0;transition:opacity 0.3s;}
-.sig-review-card:hover{border-color:rgba(201,168,76,0.25);transform:translateY(-4px);}
-.sig-review-card:hover::before{opacity:1;}
-.sig-stars{display:flex;gap:4px;}
-.sig-star{width:14px;height:14px;background:var(--gold);clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);}
-.sig-tag{display:inline-block;font-size:9px;font-weight:600;letter-spacing:0.15em;padding:4px 12px;text-transform:uppercase;background:rgba(201,168,76,0.08);color:var(--gold);border:1px solid rgba(201,168,76,0.25);align-self:flex-start;}
-.sig-review-text{font-family:'Cormorant Garamond',serif;font-size:16px;color:rgba(255,255,255,0.55);line-height:1.75;font-style:italic;flex:1;}
-.sig-reviewer{display:flex;align-items:center;gap:12px;border-top:1px solid rgba(201,168,76,0.12);padding-top:20px;margin-top:auto;}
-.sig-rev-avatar{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;flex-shrink:0;color:#fff;font-family:'Jost',sans-serif;}
-.av-blue{background:#1A4F8A}.av-teal{background:#0D6655}.av-purple{background:#4A2585}.av-coral{background:#8B3020}.av-green{background:#1A6B3A}
-.sig-reviewer-name{font-size:13px;font-weight:500;color:var(--white);margin:0;letter-spacing:0.05em;}
-.sig-reviewer-desc{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin:3px 0 0;}
-@media(max-width:900px){#testimonios{padding:60px 24px;}.sig-reviews-grid{grid-template-columns:1fr 1fr;}}
-@media(max-width:640px){.sig-video-info{flex-direction:column;}.sig-reviews-grid{grid-template-columns:1fr;}}
- 
   /* NAV */
   nav { position: fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:14px 48px; background:rgba(14,14,14,0.95); backdrop-filter:blur(16px); border-bottom:1px solid rgba(201,168,76,0.12); flex-wrap:wrap; gap:8px; }
   .nav-logo { display:flex; align-items:center; gap:14px; }
@@ -641,6 +606,41 @@
     </div>
   </div>
 </section>
+
+   /* TESTIMONIOS */
+#testimonios{background:var(--dark-2);padding:100px 48px;border-top:1px solid rgba(201,168,76,0.12);border-bottom:1px solid rgba(201,168,76,0.12);}
+.testimonios-inner{max-width:1100px;margin:0 auto;}
+.sig-video-card{background:var(--dark-3);border:1px solid rgba(201,168,76,0.15);overflow:hidden;margin-bottom:60px;}
+.sig-video-wrapper{width:100%;aspect-ratio:16/9;background:#000;}
+.sig-video-wrapper video{width:100%;height:100%;display:block;object-fit:contain;background:#000;}
+.sig-video-info{padding:28px 36px;display:flex;align-items:flex-start;gap:18px;border-top:1px solid rgba(201,168,76,0.15);}
+.sig-avatar-v{width:50px;height:50px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;color:var(--dark);flex-shrink:0;font-family:'Jost',sans-serif;}
+.sig-badge-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;}
+.sig-badge{font-size:10px;font-weight:600;letter-spacing:0.1em;padding:4px 14px;text-transform:uppercase;}
+.sig-badge-gold{background:rgba(201,168,76,0.12);color:var(--gold);border:1px solid rgba(201,168,76,0.4);}
+.sig-badge-green{background:rgba(72,199,142,0.1);color:#48C78E;border:1px solid rgba(72,199,142,0.35);}
+.sig-video-quote{font-family:'Cormorant Garamond',serif;font-size:17px;color:rgba(255,255,255,0.6);line-height:1.65;font-style:italic;margin:0 0 10px;}
+.sig-video-name{font-size:14px;font-weight:600;color:var(--white);margin:0;letter-spacing:0.05em;}
+.sig-video-role{font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin:4px 0 0;}
+.sig-divider{display:flex;align-items:center;gap:20px;margin-bottom:48px;}
+.sig-divider-line{flex:1;height:1px;background:rgba(201,168,76,0.2);}
+.sig-divider-label{font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);white-space:nowrap;}
+.sig-reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2px;}
+.sig-review-card{background:var(--dark-3);border:1px solid rgba(201,168,76,0.08);padding:36px;display:flex;flex-direction:column;gap:16px;transition:border-color 0.3s,transform 0.3s;position:relative;overflow:hidden;}
+.sig-review-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,transparent,var(--gold),transparent);opacity:0;transition:opacity 0.3s;}
+.sig-review-card:hover{border-color:rgba(201,168,76,0.25);transform:translateY(-4px);}
+.sig-review-card:hover::before{opacity:1;}
+.sig-stars{display:flex;gap:4px;}
+.sig-star{width:14px;height:14px;background:var(--gold);clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);}
+.sig-tag{display:inline-block;font-size:9px;font-weight:600;letter-spacing:0.15em;padding:4px 12px;text-transform:uppercase;background:rgba(201,168,76,0.08);color:var(--gold);border:1px solid rgba(201,168,76,0.25);align-self:flex-start;}
+.sig-review-text{font-family:'Cormorant Garamond',serif;font-size:16px;color:rgba(255,255,255,0.55);line-height:1.75;font-style:italic;flex:1;}
+.sig-reviewer{display:flex;align-items:center;gap:12px;border-top:1px solid rgba(201,168,76,0.12);padding-top:20px;margin-top:auto;}
+.sig-rev-avatar{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;flex-shrink:0;color:#fff;font-family:'Jost',sans-serif;}
+.av-blue{background:#1A4F8A}.av-teal{background:#0D6655}.av-purple{background:#4A2585}.av-coral{background:#8B3020}.av-green{background:#1A6B3A}
+.sig-reviewer-name{font-size:13px;font-weight:500;color:var(--white);margin:0;letter-spacing:0.05em;}
+.sig-reviewer-desc{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin:3px 0 0;}
+@media(max-width:900px){#testimonios{padding:60px 24px;}.sig-reviews-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:640px){.sig-video-info{flex-direction:column;}.sig-reviews-grid{grid-template-columns:1fr;}}
  
 <footer>
   <div class="nav-logo">
