@@ -15,6 +15,80 @@
   html { scroll-behavior: smooth; }
   body { font-family: 'Jost', sans-serif; background: var(--dark); color: var(--white); overflow-x: hidden; }
 
+  <!-- TESTIMONIOS -->
+<section id="testimonios">
+  <div class="testimonios-inner">
+    <p class="section-label">Testimonios</p>
+    <h2 class="section-title">Lo que dicen nuestros <em>clientes y alumnos</em></h2>
+
+    <!-- VIDEO Kelly Agudelo — sube review.mp4 a una carpeta /videos/ en tu repo -->
+    <div class="sig-video-card">
+      <div class="sig-video-wrapper">
+        <video controls preload="metadata">
+          <source src="review.mp4" type="video/mp4"/>
+        </video>
+      </div>
+      <div class="sig-video-info">
+        <div class="sig-avatar-v">KA</div>
+        <div>
+          <div class="sig-badge-row">
+            <span class="sig-badge sig-badge-gold">SIG Academy</span>
+            <span class="sig-badge sig-badge-green">&#10003; Examen estatal aprobado</span>
+          </div>
+          <p class="sig-video-quote">"Gracias a la capacitación de SIG Academy pude aprobar mi examen estatal. Una experiencia que cambió mi carrera como agente."</p>
+          <p class="sig-video-name">Kelly Agudelo</p>
+          <p class="sig-video-role">Alumna de SIG Academy &mdash; Agente licenciada</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sig-divider">
+      <div class="sig-divider-line"></div>
+      <span class="sig-divider-label">Más testimonios</span>
+      <div class="sig-divider-line"></div>
+    </div>
+
+    <div class="sig-reviews-grid">
+      <div class="sig-review-card">
+        <div class="sig-stars"><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div></div>
+        <span class="sig-tag">IUL &mdash; Familia</span>
+        <p class="sig-review-text">"Gracias a su asesoría encontré una póliza que protege a mi familia y acumula valor para mi retiro. Me explicó todo con paciencia y sin presiones."</p>
+        <div class="sig-reviewer"><div class="sig-rev-avatar av-blue">MR</div><div><p class="sig-reviewer-name">María Rodríguez</p><p class="sig-reviewer-desc">Madre de familia · Miami FL</p></div></div>
+      </div>
+      <div class="sig-review-card">
+        <div class="sig-stars"><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div></div>
+        <span class="sig-tag">IUL &mdash; Negocio</span>
+        <p class="sig-review-text">"Pensaba que el seguro de vida era solo un gasto. Ahora entiendo cómo funciona como herramienta financiera real. La diferencia es enorme."</p>
+        <div class="sig-reviewer"><div class="sig-rev-avatar av-teal">CL</div><div><p class="sig-reviewer-name">Carlos López</p><p class="sig-reviewer-desc">Empresario · Houston TX</p></div></div>
+      </div>
+      <div class="sig-review-card">
+        <div class="sig-stars"><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div></div>
+        <span class="sig-tag">IUL &mdash; Retiro</span>
+        <p class="sig-review-text">"El plan que diseñó para mí se ajusta perfectamente a mis ingresos y metas. Me siento tranquila sabiendo que tengo un plan sólido para el futuro."</p>
+        <div class="sig-reviewer"><div class="sig-rev-avatar av-purple">AG</div><div><p class="sig-reviewer-name">Ana González</p><p class="sig-reviewer-desc">Profesora · Orlando FL</p></div></div>
+      </div>
+      <div class="sig-review-card">
+        <div class="sig-stars"><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div></div>
+        <span class="sig-tag">IUL &mdash; Herencia</span>
+        <p class="sig-review-text">"Quería dejarle algo a mis hijos sin pagar impuestos innecesarios. Me guió paso a paso y logré exactamente lo que buscaba. Muy profesional."</p>
+        <div class="sig-reviewer"><div class="sig-rev-avatar av-coral">JM</div><div><p class="sig-reviewer-name">Jorge Martínez</p><p class="sig-reviewer-desc">Contratista · Dallas TX</p></div></div>
+      </div>
+      <div class="sig-review-card">
+        <div class="sig-stars"><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div></div>
+        <span class="sig-tag">IUL &mdash; Joven</span>
+        <p class="sig-review-text">"A mis 28 años no pensaba en esto, pero me mostró por qué empezar joven es la clave. La ilustración que me preparó fue muy clara y convincente."</p>
+        <div class="sig-reviewer"><div class="sig-rev-avatar av-green">SD</div><div><p class="sig-reviewer-name">Sofía Díaz</p><p class="sig-reviewer-desc">Enfermera · Los Ángeles CA</p></div></div>
+      </div>
+      <div class="sig-review-card">
+        <div class="sig-stars"><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div></div>
+        <span class="sig-tag">IUL &mdash; Protección</span>
+        <p class="sig-review-text">"Me sorprendió lo completo que era el plan. Protección, ahorro y flexibilidad en uno solo. Lo recomiendo a cualquier persona que quiera seguridad real."</p>
+        <div class="sig-reviewer"><div class="sig-rev-avatar av-blue">RP</div><div><p class="sig-reviewer-name">Roberto Peña</p><p class="sig-reviewer-desc">Chef · New York NY</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
   /* TESTIMONIOS */
 #testimonios{background:var(--dark-2);padding:100px 48px;border-top:1px solid rgba(201,168,76,0.12);border-bottom:1px solid rgba(201,168,76,0.12);}
 .testimonios-inner{max-width:1100px;margin:0 auto;}
@@ -563,80 +637,6 @@
         <div class="error-msg" id="errorMsg">Ocurrió un error al enviar. Por favor intenta de nuevo.</div>
         <button class="submit-btn" id="submitBtn" onclick="handleSubmit()"><span id="btnText">Enviar solicitud →</span></button>
         <p class="form-note">🔒 Tu información es 100% confidencial · NPN: 22141824</p>
-      </div>
-    </div>
-  </div>
-</section>
-
- <!-- TESTIMONIOS -->
-<section id="testimonios">
-  <div class="testimonios-inner">
-    <p class="section-label">Testimonios</p>
-    <h2 class="section-title">Lo que dicen nuestros <em>clientes y alumnos</em></h2>
-
-    <!-- VIDEO Kelly Agudelo — sube review.mp4 a una carpeta /videos/ en tu repo -->
-    <div class="sig-video-card">
-      <div class="sig-video-wrapper">
-        <video controls preload="metadata">
-          <source src="review.mp4" type="video/mp4"/>
-        </video>
-      </div>
-      <div class="sig-video-info">
-        <div class="sig-avatar-v">KA</div>
-        <div>
-          <div class="sig-badge-row">
-            <span class="sig-badge sig-badge-gold">SIG Academy</span>
-            <span class="sig-badge sig-badge-green">&#10003; Examen estatal aprobado</span>
-          </div>
-          <p class="sig-video-quote">"Gracias a la capacitación de SIG Academy pude aprobar mi examen estatal. Una experiencia que cambió mi carrera como agente."</p>
-          <p class="sig-video-name">Kelly Agudelo</p>
-          <p class="sig-video-role">Alumna de SIG Academy &mdash; Agente licenciada</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="sig-divider">
-      <div class="sig-divider-line"></div>
-      <span class="sig-divider-label">Más testimonios</span>
-      <div class="sig-divider-line"></div>
-    </div>
-
-    <div class="sig-reviews-grid">
-      <div class="sig-review-card">
-        <div class="sig-stars"><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div></div>
-        <span class="sig-tag">IUL &mdash; Familia</span>
-        <p class="sig-review-text">"Gracias a su asesoría encontré una póliza que protege a mi familia y acumula valor para mi retiro. Me explicó todo con paciencia y sin presiones."</p>
-        <div class="sig-reviewer"><div class="sig-rev-avatar av-blue">MR</div><div><p class="sig-reviewer-name">María Rodríguez</p><p class="sig-reviewer-desc">Madre de familia · Miami FL</p></div></div>
-      </div>
-      <div class="sig-review-card">
-        <div class="sig-stars"><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div></div>
-        <span class="sig-tag">IUL &mdash; Negocio</span>
-        <p class="sig-review-text">"Pensaba que el seguro de vida era solo un gasto. Ahora entiendo cómo funciona como herramienta financiera real. La diferencia es enorme."</p>
-        <div class="sig-reviewer"><div class="sig-rev-avatar av-teal">CL</div><div><p class="sig-reviewer-name">Carlos López</p><p class="sig-reviewer-desc">Empresario · Houston TX</p></div></div>
-      </div>
-      <div class="sig-review-card">
-        <div class="sig-stars"><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div></div>
-        <span class="sig-tag">IUL &mdash; Retiro</span>
-        <p class="sig-review-text">"El plan que diseñó para mí se ajusta perfectamente a mis ingresos y metas. Me siento tranquila sabiendo que tengo un plan sólido para el futuro."</p>
-        <div class="sig-reviewer"><div class="sig-rev-avatar av-purple">AG</div><div><p class="sig-reviewer-name">Ana González</p><p class="sig-reviewer-desc">Profesora · Orlando FL</p></div></div>
-      </div>
-      <div class="sig-review-card">
-        <div class="sig-stars"><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div></div>
-        <span class="sig-tag">IUL &mdash; Herencia</span>
-        <p class="sig-review-text">"Quería dejarle algo a mis hijos sin pagar impuestos innecesarios. Me guió paso a paso y logré exactamente lo que buscaba. Muy profesional."</p>
-        <div class="sig-reviewer"><div class="sig-rev-avatar av-coral">JM</div><div><p class="sig-reviewer-name">Jorge Martínez</p><p class="sig-reviewer-desc">Contratista · Dallas TX</p></div></div>
-      </div>
-      <div class="sig-review-card">
-        <div class="sig-stars"><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div></div>
-        <span class="sig-tag">IUL &mdash; Joven</span>
-        <p class="sig-review-text">"A mis 28 años no pensaba en esto, pero me mostró por qué empezar joven es la clave. La ilustración que me preparó fue muy clara y convincente."</p>
-        <div class="sig-reviewer"><div class="sig-rev-avatar av-green">SD</div><div><p class="sig-reviewer-name">Sofía Díaz</p><p class="sig-reviewer-desc">Enfermera · Los Ángeles CA</p></div></div>
-      </div>
-      <div class="sig-review-card">
-        <div class="sig-stars"><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div><div class="sig-star"></div></div>
-        <span class="sig-tag">IUL &mdash; Protección</span>
-        <p class="sig-review-text">"Me sorprendió lo completo que era el plan. Protección, ahorro y flexibilidad en uno solo. Lo recomiendo a cualquier persona que quiera seguridad real."</p>
-        <div class="sig-reviewer"><div class="sig-rev-avatar av-blue">RP</div><div><p class="sig-reviewer-name">Roberto Peña</p><p class="sig-reviewer-desc">Chef · New York NY</p></div></div>
       </div>
     </div>
   </div>
