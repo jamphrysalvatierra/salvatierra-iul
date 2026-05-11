@@ -569,7 +569,13 @@ const CHS = [
    sub:"Prácticas de comercialización, documentos de divulgación, idoneidad (suitability), estándar de mejor interés NAIC, reemplazo de pólizas y seguro de vida grupal en Florida.",
    tags:["Florida","Regulación","Grupal"],
    topics:["Guía del Comprador: antes del primer pago de prima","Resumen de Póliza: documento SEPARADO, no con la presentación","Regalos publicitarios: máximo $100 por asegurado por año calendario","Regulación de solicitación: NO aplica a anualidades, grupal, variables, ERISA","Idoneidad de anualidades: 10 factores a evaluar","Consumidor mayor: 65+ años (en compra conjunta basta uno con 65+)","Estándar de Mejor Interés NAIC: Cuidado, Divulgación, Conflicto, Documentación","Reemplazo: aviso firmado por aspirante y productor","5 días laborales (reemplazante → solicitante) / 10 días (aseguradora existente → dueño)","Registros: 3 años (reemplazo) / 5 años (consumidores mayores)","Free Look: 14 días vida individual / 21 días anualidades","Período de Gracia: 30 días individual / 31 días grupal","Destinatario Secundario: 64+ años con póliza vigente ≥1 año","Conversión grupal en Florida: 31 días, máx. $10,000, sin evidencia de asegurabilidad"],
-   pdf:"https://jamphrysalvatierra.github.io/salvatierra-iul/academy/Guia_Estudio_Seguros_de_Vida_Capitulo_VI.pdf",audio:"https://drive.google.com/file/d/1uQi1rl2UeXoAce-LFfeSGVp5Gmwh13b6/preview",atitle:"Cap. VI — Estatutos y Reglas de Florida II"}
+   pdf:"https://jamphrysalvatierra.github.io/salvatierra-iul/academy/Guia_Estudio_Seguros_de_Vida_Capitulo_VI.pdf",audio:"https://drive.google.com/file/d/1uQi1rl2UeXoAce-LFfeSGVp5Gmwh13b6/preview",atitle:"Cap. VI — Estatutos y Reglas de Florida II"},
+  {n:7,color:"#4A0E8F",bg:"#EDE8F7",
+   title:"Evaluación Final — Licencia de Vida Florida",
+   sub:"Evaluación comprensiva de los 6 capítulos. 24 preguntas: 16 de conceptos fundamentales (Cap. 1-4) y 8 de regulación Florida (Cap. 5-6). Mínimo 70% para certificar.",
+   tags:["Evaluación Final","Todos los Temas","Certificación"],
+   topics:["Contratos y elementos legales (Cap. 1)","Leyes federales: FCRA, HIPAA, GLB, PATRIOT (Cap. 1)","Tipos de pólizas de vida (Cap. 2)","Anualidades y sus características (Cap. 2)","Disposiciones estándar NAIC (Cap. 3)","Opciones de no-caducidad y dividendos (Cap. 3)","Planes de jubilación: IRA, Roth, Keogh, SIMPLE (Cap. 4)","MEC, Key Person, Buy-Sell, Seguridad Social (Cap. 4)","Regulación DFS y tipos de aseguradoras (Cap. 5)","Licencias, nombramientos y educación continua (Cap. 5)","Prácticas desleales: churning, twisting, rebating (Cap. 5)","Guía del comprador y resumen de póliza (Cap. 6)","Idoneidad y Mejor Interés NAIC (Cap. 6)","Reemplazo de pólizas y Free Look (Cap. 6)","Consumidor mayor 65+ y destinatario secundario (Cap. 6)","Estatutos y reglas de comercialización Florida (Cap. 6)"],
+   pdf:"",audio:"",atitle:"Evaluación Final"}
 ];
 
 // ════════════════════════════════════════════════
@@ -804,6 +810,12 @@ function saveQuestions(q){ _questions=q; }
 
 function isModuleUnlocked(i){
   if(i===0) return true;
+  if(i===6){
+    // Final exam: requires all 6 modules passed
+    const p=getProg();
+    for(let j=0;j<6;j++){ if(!p.quizzes[j]||!p.quizzes[j].passed) return false; }
+    return true;
+  }
   const p=getProg();
   const prev=p.quizzes[i-1];
   return prev && prev.passed;
@@ -811,6 +823,10 @@ function isModuleUnlocked(i){
 
 function getModulePct(i){
   const p=getProg();
+  if(i===6){
+    const q=p.quizzes[6];
+    return (q&&q.passed)?100:0;
+  }
   let score=0, max=3;
   if(p.opened.includes(i)) score++;
   if(p.pdfs.includes(i)) score++;
@@ -821,8 +837,8 @@ function getModulePct(i){
 
 function updateOverall(){
   let total=0;
-  for(let i=0;i<6;i++) total+=getModulePct(i);
-  const pct=Math.round(total/6);
+  for(let i=0;i<7;i++) total+=getModulePct(i);
+  const pct=Math.round(total/7);
   document.getElementById('overallFill').style.width=pct+'%';
   document.getElementById('overallPct').textContent=pct+'%';
 }
@@ -871,8 +887,11 @@ function renderG(list){
           </div>
         </div>
         <div class="ccard-btns">
-          <button class="abtn" style="background:${ch.bg};color:${ch.color}" onclick="event.stopPropagation();${locked?'':'openM('+i+')'}">📄 Ver Guía</button>
-          <button class="abtn ${quizCls}" onclick="event.stopPropagation();${locked?'':'startQuiz('+i+')'}" ${locked?'disabled':''} title="${!hasQ?'Agrega preguntas desde el panel Admin':''}">${quizLabel}${!hasQ?' ⚠️':''}</button>
+          ${i===6
+            ? `<button class="abtn" style="background:${ch.bg};color:${ch.color};flex:1" onclick="event.stopPropagation();${locked?'':'openM('+i+')'}">${locked?'🔒 Completa los 6 módulos':'🏆 Iniciar Evaluación Final'}</button>`
+            : `<button class="abtn" style="background:${ch.bg};color:${ch.color}" onclick="event.stopPropagation();${locked?'':'openM('+i+')'}">📄 Ver Guía</button>
+               <button class="abtn ${quizCls}" onclick="event.stopPropagation();${locked?'':'startQuiz('+i+')'}" ${locked?'disabled':''} title="${!hasQ?'Agrega preguntas desde el panel Admin':''}">${quizLabel}${!hasQ?' ⚠️':''}</button>`
+          }
         </div>
       </div>`;
     if(!locked) d.onclick=()=>openM(i);
@@ -975,6 +994,8 @@ function renderProg(){
 function openM(i){
   const ch=CHS[i];
   if(!isModuleUnlocked(i)) return;
+  // Ch7 = Final Exam — go directly to quiz
+  if(i===6){ startQuiz(6); return; }
   const p=getProg();
   if(!p.opened.includes(i)){p.opened.push(i);saveProg(p);}
   document.getElementById('mStripe').style.background=`linear-gradient(90deg,${ch.color},${ch.bg})`;
@@ -1034,8 +1055,42 @@ function showTab(name,btn){
 // ════════════════════════════════════════════════
 let quizState={};
 
+// ════════════════════════════════════════════════
+//  FINAL EXAM BUILDER
+// ════════════════════════════════════════════════
+function buildFinalExam(){
+  const all = getQuestions();
+  function pickRandom(arr, n){
+    const shuffled = [...arr].sort(()=>Math.random()-.5);
+    return shuffled.slice(0, Math.min(n, shuffled.length));
+  }
+  // 4 questions from each of caps 1-4 (16 total)
+  let selected = [];
+  for(let m=0;m<4;m++){
+    const pool = all.filter(q=>q.module===m);
+    selected = selected.concat(pickRandom(pool, 4));
+  }
+  // 4 questions from cap 5, 4 from cap 6 (8 total)
+  const pool5 = all.filter(q=>q.module===4);
+  const pool6 = all.filter(q=>q.module===5);
+  selected = selected.concat(pickRandom(pool5, 4));
+  selected = selected.concat(pickRandom(pool6, 4));
+  // Shuffle final list
+  return selected.sort(()=>Math.random()-.5);
+}
+
 function startQuiz(moduleIdx){
-  const questions=getQuestions().filter(q=>q.module===moduleIdx);
+  // Module 6 (index) = Final Exam — pick questions from all modules
+  let questions;
+  if(moduleIdx===6){
+    questions = buildFinalExam();
+    if(!questions.length){
+      alert('No hay suficientes preguntas para la evaluación final. Asegúrate de tener preguntas en todos los módulos.');
+      return;
+    }
+  } else {
+    questions=getQuestions().filter(q=>q.module===moduleIdx);
+  }
   if(!questions.length){
     document.getElementById('quizOv').classList.add('open');
     document.getElementById('quizTitle').textContent='Cap. '+(moduleIdx+1)+' — Sin preguntas';
